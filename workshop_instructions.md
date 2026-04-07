@@ -54,9 +54,8 @@ For the purpose of this workshop there is a default CD pipeline configured in `.
 In order to make use of this you will need to:
 * Create an Azure Container Registry (ACR) Instance and enable the Admin User (under `Access Keys`)
   * Copy the Admin User name, Password and Login Server URL for future reference (the latter can be found on the Overview tab on ACR)
-* In Azure, under your App Service's "Deployment Center", update the image name/tag to `${ACR_LOGIN_SERVER_URL}/monitoring_workshop/unit-10-order-processing-app`
-* Grab the `Webhook URL` from the App Service Deployment Center and add it to ACR as a Webhook
-  * This can be found under `Services` => `Webhooks` => `Add` (the App Service Webhook URL is set as the `Service URI`)
+* In Azure, under your App Service's "Deployment Center", update the image source to "Azure Container Registry", pick your newly created registry.
+* Set "Image" to `monitoring_workshop/unit-10-order-processing-app` and "Image tag" to `latest`
 * Update [the deployment pipeline file](./.github/workflows/deploy.yml) with your ACR login server URL and admin username
 * Add a GitHub repository secret with the name `ACR_ADMIN_PASSWORD` with your ACR Admin password
 * Enable GitHub Actions by clicking the the `Actions` link on your GitHub fork and click the green button to enable Actions for your repository 
