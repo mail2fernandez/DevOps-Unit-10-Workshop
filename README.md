@@ -4,7 +4,7 @@ This repository is for learners on Corndel's DevOps Engineering Apprenticeship.
  
 *We'll be using GitHub Actions to make updates during this workshop so please fork this repo so that you can configure secrets and push changes.*
 
-## Pre-requisites
+## Pre-requisites  
 
 Make sure you have installed the following installed:
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
