@@ -1,3 +1,12 @@
+from azure.monitor.opentelemetry import configure_azure_monitor
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+# Enable telemetry export to Application Insights
+configure_azure_monitor()
+# Optional (later): configure_azure_monitor(enable_live_metrics=True
+
 from flask import Flask, render_template, request
 from datetime import datetime, timezone
 
