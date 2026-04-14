@@ -4,7 +4,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 # Enable telemetry export to Application Insights
-configure_azure_monitor()
+configure_azure_monitor(enable_live_metrics=True)
 # Optional (later): configure_azure_monitor(enable_live_metrics=True
 
 from flask import Flask, render_template, request
