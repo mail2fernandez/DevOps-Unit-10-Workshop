@@ -14,7 +14,7 @@ class Order(db.Model):
     product = db.Column(db.String(100), nullable=False)
     customer = db.Column(db.String(100), nullable=False)
     status = db.Column(db.String(100), nullable=False)
-    date_placed_local = db.Column(DATETIMEOFFSET, nullable=False)
+    date_placed = db.Column(DATETIMEOFFSET, nullable=False)
     date_processed = db.Column(DATETIMEOFFSET, nullable=True)
     download = db.Column(db.LargeBinary, nullable=True)
 
