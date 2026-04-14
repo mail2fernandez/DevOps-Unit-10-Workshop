@@ -24,7 +24,7 @@ def process_orders(app):
         order = orders[0]
 
         payload = {
-            "product": order.product, 
+            "product": order.product,
             "customer": order.customer,
             "date": order.date_placed.isoformat(),
         }
