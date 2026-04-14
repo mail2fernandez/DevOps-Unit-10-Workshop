@@ -14,14 +14,14 @@ class Order(db.Model):
     product = db.Column(db.String(100), nullable=False)
     customer = db.Column(db.String(100), nullable=False)
     status = db.Column(db.String(100), nullable=False)
-    date_placed = db.Column(DATETIMEOFFSET, nullable=False)
+    date_placed_local = db.Column(DATETIMEOFFSET, nullable=False)
     date_processed = db.Column(DATETIMEOFFSET, nullable=True)
     download = db.Column(db.LargeBinary, nullable=True)
 
     def __init__(self, product, customer, date_placed, date_processed, download):
         self.product = product
         self.customer = customer
-        self.date_placed_local = date_placed
+        self.date_placed_local = date_placed_local
         self.date_processed = date_processed
         self.status = 'Complete' if self.date_processed else 'Queued'
         self.download = download
